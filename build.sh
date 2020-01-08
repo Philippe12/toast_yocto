@@ -4,7 +4,7 @@ TARGET=/mnt
 BUILD=/root/rpi/build
 
 #mkdir -p $BUILD/conf
-source /root/poky-morty/oe-init-build-env $BUILD
+source /root/poky-morty/oe-init-build-env $TARGET
 
 #if [ -f $TARGET/local.conf ]; then
 #  cp -f $TARGET/local.conf $BUILD/conf/local.conf
@@ -23,3 +23,4 @@ source /root/poky-morty/oe-init-build-env $BUILD
 source toaster start webport="0.0.0.0:8000"
 #bitbake console-image
 #cp -r $BUILD/tmp/deploy/images/* $TARGET/
+bash -i
