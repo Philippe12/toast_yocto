@@ -19,7 +19,7 @@ source /root/poky-morty/oe-init-build-env $BUILD
 #fi
 
 #touch $BUILD/conf/sanity.conf
-cd $BUILD
+#cd $BUILD
 source toaster start webport="0.0.0.0:8000"
 #bitbake console-image
 #cp -r $BUILD/tmp/deploy/images/* $TARGET/
