@@ -23,4 +23,5 @@ source /root/poky-morty/oe-init-build-env $TARGET
 source toaster start webport="0.0.0.0:8000"
 #bitbake console-image
 #cp -r $BUILD/tmp/deploy/images/* $TARGET/
-bash -i
+while true; do $(echo date); sleep 120; done
+
