@@ -18,6 +18,8 @@ ENV LC_ALL en_US.UTF-8
 
 WORKDIR /root
 
+RUN git config --global url."https://".insteadOf git://
+
 RUN git clone -b morty https://git.yoctoproject.org/git/poky poky-morty --depth=1
 #    cd poky-morty && \
 #    git clone -b morty https://git.openembedded.org/meta-openembedded && \
