@@ -20,14 +20,16 @@ ENV LC_ALL en_US.UTF-8
 
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
-WORKDIR /root
+RUN useradd -ms /bin/bash builderuser
+USER builderuser
+WORKDIR /home/builderuser
 
 RUN git clone -b zeus https://git.yoctoproject.org/git/poky poky --depth=1
 
 # Install Toaster.
 
-RUN pip3 install --user -r /root/poky/bitbake/toaster-requirements.txt
+RUN pip3 install --user -r /home/builderuser/poky/bitbake/toaster-requirements.txt
 
-COPY build.sh /root/build.sh
+COPY build.sh /home/builderuser/build.sh
 
-CMD ["/bin/bash", "/root/build.sh"]
+CMD ["/bin/bash", "/home/builderuser/build.sh"]
