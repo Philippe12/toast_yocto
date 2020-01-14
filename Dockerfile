@@ -32,8 +32,8 @@ RUN pip3 install --user -r /home/builderuser/poky/bitbake/toaster-requirements.t
 
 COPY build.sh /home/builderuser/build.sh
 
-RUN git config --system url."https://git.yoctoproject.org/git/".insteadOf git://git.yoctoproject.org/
-RUN git config --system url."https://git.openembedded.org/".insteadOf git://git.openembedded.org/
-RUN git config --system url."https://github.com/".insteadOf git://github.com/
+RUN git config --global url."https://git.yoctoproject.org/git/".insteadOf git://git.yoctoproject.org/
+RUN git config --global url."https://git.openembedded.org/".insteadOf git://git.openembedded.org/
+RUN git config --global url."https://github.com/".insteadOf git://github.com/
 
 CMD ["/bin/bash", "/home/builderuser/build.sh"]
