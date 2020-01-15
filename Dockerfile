@@ -24,7 +24,7 @@ RUN useradd -ms /bin/bash builderuser
 USER builderuser
 WORKDIR /home/builderuser
 
-RUN git clone -b zeus https://git.yoctoproject.org/git/poky poky --depth=1
+RUN git clone https://git.yoctoproject.org/git/poky poky --depth=1
 
 # Install Toaster.
 
