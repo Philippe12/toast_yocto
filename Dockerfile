@@ -36,6 +36,6 @@ RUN git config --global url."https://git.yoctoproject.org/git/".insteadOf git://
 RUN git config --global url."https://git.openembedded.org/".insteadOf git://git.openembedded.org/
 RUN git config --global url."https://github.com/".insteadOf git://github.com/
 
-VOLUME /mnt
+VOLUME /working
 
 CMD ["/bin/bash", "/home/builderuser/build.sh"]
