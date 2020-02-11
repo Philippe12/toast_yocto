@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /home/builderuser/poky/oe-init-build-env /working
+source /home/builderuser/poky/oe-init-build-env
 
 source toaster start webport="0.0.0.0:8000" toasterdir="/working"
 /home/builderuser/poky/bitbake/lib/toaster/manage.py makemigrations
